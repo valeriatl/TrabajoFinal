@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gota de Agua</title>
+    <link rel="stylesheet" href="gota.css">
+</head>
+<body>
+
+
+
+<div id="personaje">
+    <div class="gota"></div>
+    <div class="ladoizquierdo">
+        <div class="ojoizquierdo">
+            <div class="ojopizquierdo"></div>
+            <div class="ojoppizquierdo"></div>
+        </div>
+            <div class="mejillaizquierda"></div>
+            <div class="cejaizquierda"></div>
+    </div>
+
+    <div class="ladoderecho">
+        <div class="ojoderecho">
+        <div class="ojopderecho"></div>
+        <div class="ojoppderecho"></div>
+        </div>
+        <div class="mejilladerecha"></div>
+        <div class="cejaderecha"></div>
+    </div>
+
+    <div class="boca">
+        <div class="lengua"></div>
+    </div>
+
+
+
+    <div id="pecas">
+        <div class="pecas1"></div>
+        <div class="pecas2"></div>
+        <div class="pecas3"></div>
+        <div class="pecas4"></div>
+    </div>
+</div>
+
+
+<script>
+    // Seleccionamos las pupilas
+    const pupilaIzquierda = document.querySelector('.ojopizquierdo');
+    const pupilaDerecha = document.querySelector('.ojopderecho');
+    const pupilabizquierda = document.querySelector('.ojoppizquierdo');
+    const pupilabderecha = document.querySelector('.ojoppderecho');
+
+    // Función para mover las pupilas según el movimiento del mouse
+    document.addEventListener('mousemove', (event) => {
+        // Obtener las coordenadas del mouse
+        const x = (event.clientX / window.innerWidth) * 100;
+        const y = (event.clientY / window.innerHeight) * 100;
+
+        // Ajustar la posición de las pupilas con un rango limitado     
+        pupilabderecha.style.transform = `translate(${x / 7 - 6}px, ${y / 7 - 6}px)`;
+        pupilabizquierda.style.transform = `translate(${x / 7 - 6}px, ${y / 7 - 6}px)`;
+        pupilaIzquierda.style.transform = `translate(${x / 7 - 6}px, ${y / 7 - 6}px)`;
+        pupilaDerecha.style.transform = `translate(${x / 7 - 6}px, ${y / 7 - 6}px)`;
+    });
+
+     // Seleccionamos los ojos
+     const ojoIzquierdo = document.querySelector('.ojoizquierdo');
+    const ojoDerecho = document.querySelector('.ojoderecho');
+
+    // Función para iniciar la animación de parpadeo
+    function parpadear() {
+        // Reiniciar la animación restableciendo el estilo
+        ojoIzquierdo.style.animation = 'none';
+        ojoDerecho.style.animation = 'none';
+        
+        // Forzar un reflow para que la animación se reinicie
+        ojoIzquierdo.offsetHeight; 
+        ojoDerecho.offsetHeight; 
+
+        // Iniciar la animación de nuevo
+        ojoIzquierdo.style.animation = 'parpadeo 0.2s ease-in-out';
+        ojoDerecho.style.animation = 'parpadeo 0.2s ease-in-out';
+    }
+
+    // Parpadear cada 5 segundos
+    setInterval(parpadear, 3000);
+</script>
+</body>
+</html>

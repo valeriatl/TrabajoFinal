@@ -1,0 +1,121 @@
+.ducha{
+    width: 180px;
+    height: 500px;
+}
+
+/* Contenedor de la regadera */
+.regadera {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Cabeza de la regadera */
+.cabeza {
+    width: 150px;
+    height: 40px;
+    background: #888;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cabeza2{
+    width: 120px;
+    height: 40px;
+    background: #8888;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    top: -18px;
+    left: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+
+/* Agujeros de la regadera */
+.agujero {
+    width: 12px;
+    height: 12px;
+    background-color: #00FF0000; /* Color oscuro para los agujeros */
+    border-radius: 50%;
+    position: absolute;
+    top: 25px; /* Ajustado para que estén sobre la cabeza de la regadera */
+    z-index: 0; /* Los agujeros deben estar encima de la cabeza */
+}
+
+.agujero:nth-child(1) {
+    left: 10%;
+}
+
+.agujero:nth-child(2) {
+    left: 20%;
+}
+
+.agujero:nth-child(3) {
+    left: 30%;
+}
+
+.agujero:nth-child(4) {
+    left: 40%;
+}
+
+.agujero:nth-child(5) {
+    left: 50%;
+}
+
+.agujero:nth-child(6) {
+    left: 60%;
+}
+
+.agujero:nth-child(7) {
+    left: 70%;
+}
+
+.agujero:nth-child(8) {
+    left: 80%;
+}
+
+.agujero:nth-child(9) {
+    left: 90%;
+}
+
+.agujero:nth-child(10) {
+    left: 100%;
+}
+
+/* Estilo para las gotas de agua */
+.agua {
+    position: absolute;
+    top: 0; /* Después de la cabeza de la regadera */
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Estilo general de las gotas */
+.gota_ducha {
+    width: 2px;  /* Gotas más estrechas */
+    height: 25px; /* Gotas más alargadas */
+    background-color: #00ADE5; /* Color del agua */
+    opacity: 0;
+    position: absolute;
+    animation: caida-lenta 1.5s ease-in-out infinite; /* Aumento de la duración para caer más lento */
+}
+
+/* Animación para simular el movimiento natural de las gotas */
+@keyframes caida-lenta {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 500px; /* Caída más baja antes de desaparecer */
+    }
+}

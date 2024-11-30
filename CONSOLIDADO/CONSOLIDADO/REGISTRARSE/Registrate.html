@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidro Exploradores</title>
+
+    <link rel="stylesheet" href="./Registrate.css">
+<link rel="stylesheet" href="../GOTA/gota.css">
+<link rel="icon" type="image/x-icon" href="../GOTA/Gota_Logo.png">
+<!--Esto hace que funcionen los alerts-->
+<link rel="stylesheet" href="sweetalert2.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+
+<body>
+
+<div id="principal">
+    <header>
+        <nav>
+            <div id="logo"></div>
+            <div id="barra_opciones">
+                <a class="nav" href="../HOME/home.html">Inicio</a>
+                <a class="nav" href="../EDUCATIVO/Educativo.html">Educativo</a>
+                <a class="nav" href="../INTERACTIVO/Interactivo.html">Interactivo</a>
+                <a class="nav" href="../PARA PAPITOS/Para_Papitos.html">Para papitos</a>
+                <a href="../LOGIN/login.html"><i class='bx bxs-user-pin' ></i></a>
+            </div>
+        </nav>
+    </header>
+
+<section>
+ <div id="fondogota">
+    <div id="personaje">
+        <div class="gota"></div>
+            <div class="ladoizquierdo">
+                <div class="ojoizquierdo">
+                    <div class="ojopizquierdo"></div>
+                    <div class="ojoppizquierdo"></div>
+                </div>
+                    <div class="mejillaizquierda"></div>
+                    <div class="cejaizquierda"></div>
+            </div>
+
+            <div class="ladoderecho">
+                <div class="ojoderecho">
+                <div class="ojopderecho"></div>
+                <div class="ojoppderecho"></div>
+                </div>
+                <div class="mejilladerecha"></div>
+                <div class="cejaderecha"></div>
+            </div>
+
+            <div class="boca">
+                <div class="lengua"></div>
+            </div>
+
+
+
+            <div id="pecas">
+                <div class="pecas1"></div>
+                <div class="pecas2"></div>
+                <div class="pecas3"></div>
+                <div class="pecas4"></div>
+            </div>
+    </div>
+</div>
+    <div id="cajaborde">
+        <div id="formulario">
+            <h1 id="titulo">Regístrate</h1>
+            <form action="">
+                <div id="datos">
+                    <h1>Correo Electrónico</h1>
+                    <input id="input_correo" type="email" placeholder="Ejemplo@gmail.com" required>
+                </div>
+                <div id="datos">
+                    <h1>Nombre de Usuario</h1>
+                    <input id="input_usuario" type="text" placeholder="Ejemplo_1" required>
+                </div>
+                <div id="datos">
+                    <h1>Contraseña</h1>
+                    <input  id="input_contraseña1" type="password" placeholder="Ingresa tu contraseña" required>
+                    <i id="mostrarc1" class='bx bx-show'></i>
+                    <i  id="ocultarc1" class='bx bx-hide'></i>
+                </div>
+                <div id="datos">
+                    <h1>Repite la contraseña</h1>
+                    <input  id="input_contraseña2" type="password" placeholder="Repite la contraseña" required>
+                    <i id="mostrarc2" class='bx bx-show'></i>
+                    <i  id="ocultarc2" class='bx bx-hide'></i>
+                </div>
+                <div id="alerta"></div>
+                <button type="submit" id="enviar">Crear Cuenta</button>
+                <p id="registrate"> ¿Ya tienes una cuenta? <a href="../LOGIN/login.html">Inicia Sesión</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+<footer>
+    <div id="footer">
+        <label for="" id="logos">
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-whatsapp'></i>
+        <i class='bx bxl-instagram' ></i>
+        <i class='bx bxl-gmail' ></i>
+        </label>
+        <p>© Todos los derechos reservados</p>
+    </div>
+ </footer>
+</div>
+<!--Esto hace que funcionen los alerts-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
+    
+    <script src="./Registrate.js"></script>
+    <script src="../GOTA/gota.js"></script>
+</body>
+</html>

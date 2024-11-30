@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    font-family: 'montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+#contenido{
+    padding: 0% 17%;
+}
+
+h2, p{
+    color: #2F2859;
+}
+
+/*TODO ESTO ES LA BARRA DE NAVEGACIÓN*/
+nav{
+    height: 6vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(-45deg, #00E0FE, #00ADE5);
+    box-shadow: 2px 0 10px 0px #2F2859;
+    z-index: 5;
+    display: flex;
+    justify-content: end;
+
+}
+
+nav i{
+    font-size: 2.4em;
+    color: white;
+}
+
+#barra_opciones{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#barra_opciones .nav{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-size: 1.4em;
+    background-color: transparent;
+    padding: 0.6% 1.9%;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+#barra_opciones .nav::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10%;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+  }
+
+#barra_opciones a:hover::before {
+    width: 100%;
+  }
+
+/*ACÁ TERMINA LA BARRA DE NAVEGACIÓN*/
+
+#contenido{
+    margin: 10vh 0 5vh 0;
+}
+
+.sobre_nosotros {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 2% auto ;
+    padding: 1%;
+    text-transform: uppercase;
+    color: #2F2859;   
+}
+
+.sobre_nosotros_2 {
+    font-size: 1.1em;
+    text-align: justify;
+    margin: 1%  5%;
+    padding: 1%;
+    border: #00ADE5 outset 0.2em;
+    border-radius: 1em;
+    background-color: #f9f9f9;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+   
+}
+
+.nuestra_mision {
+    font-size: 2.5em;
+    text-align: justify;
+    margin: 2% 5%;
+    padding: 1%;
+    color: #2F2859;
+    text-transform: uppercase;
+}
+
+.nuestra_mision_2 {
+    font-size: 1.1em;
+    text-align: left;
+    margin: 1% 5%;
+    padding: 1%;
+    border: #00ADE5 inset 0.2em;
+    border-radius: 1em; 
+    background-color: #f9f9f9;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.nuestra_vision {
+    font-size: 2.5em;
+    text-align: right;
+    margin: 2% 5%;
+    padding: 1%;
+    color: #2F2859;
+    text-transform: uppercase;
+    
+}
+
+.nuestra_vision_2 {
+    font-size: 1.1em;
+    text-align: justify;    
+    margin: 1% 5%;
+    padding: 1%;
+    border: #00ADE5 outset 0.2em;
+    border-radius: 1em;
+    background-color: #f9f9f9;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+
+.valores {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 2% auto ;
+    padding: 1%;
+    color: #2F2859;
+    text-transform: uppercase;
+}
+
+.innovacion {
+    font-size: 1.6em;
+    text-align: justify;
+    margin: 2% 5%;
+    padding: 1%;
+    
+}
+
+.innovacion_2 {
+    font-size: 1.1em;
+    text-align: justify;
+    margin: 1% 5%;
+    padding: 1%;
+    border: #00ADE5 inset 0.2em;
+    border-radius: 1em;
+    background-color: #f9f9f9;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    
+}
+
+.compromiso {
+    font-size: 1.6em;
+    text-align: justify;
+    margin: 2% 5%;
+    padding: 1%;
+    
+}
+
+.compromiso_2 {
+    font-size: 1.1em;
+    text-align: justify;
+    margin: 1% 5%;
+    padding: 1%;
+    border: #00ADE5 outset 0.2em;
+    border-radius: 1em;
+    background-color: #f9f9f9;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    
+}
+
+.etica {
+    font-size: 1.6em;
+    text-align: justify;
+    margin: 2% 5%;
+    padding: 1%;
+    
+}
+
+.etica_2 {
+    font-size: 1.1em;
+    text-align: justify;
+    margin: 1% 5%;
+    padding: 1%;
+    border: #00ADE5 inset 0.2em;
+    border-radius: 1em;
+    background-color: #f9f9f9;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    
+}
+
+.trabajo_equipo {
+    font-size: 1.6em;
+    text-align: justify;
+    margin: 2% 5%;
+    padding: 1%;   
+}
+
+.trabajo_equipo_2 {
+    font-size: 1.1em;
+    text-align: justify;
+    margin: 1% 5%;
+    padding: 1%;
+    border: #00ADE5 outset 0.2em;
+    border-radius: 1em;
+    background-color: #f9f9f9;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    
+}
+
+/* Estilo para el contenedor del SVG */
+.svg-container {
+    height: 10em;
+    overflow: hidden;
+}
+
+/* Estilo para el SVG */
+.svg-shape {
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilo para el path dentro del SVG */
+.svg-path {
+    stroke: none;
+    fill: #08f; /* Azul brillante */
+}
+
+.conoce_equipo {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 2% auto ;
+    padding: 1%;
+    color: #2F2859;
+    text-transform: uppercase;
+}
+
+/* Estilo para los miembros del equipo */
+.equipo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content:  center;
+    width: 100%;
+    gap: 5%;
+    padding: 0 0%;
+
+}
+
+.equipo-foto {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    padding: 1.5%;
+    margin: 1% 0;
+    border-radius: 1.5em;
+    text-align: center;
+    width: 16%;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Transición suave */
+    word-wrap: break-word;
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}
+
+.equipo-foto:hover {
+    transform: translateY(-1em); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2); /* Aumentar sombra al pasar el mouse */
+}
+
+.equipo-foto img {
+    border-radius: 50%;
+    margin-bottom: 10%;
+    width: 80%;
+    height: auto;
+    transition: transform 0.3s ease; /* Añadir transición a la imagen */
+}
+
+.equipo-foto img:hover {
+    transform: scale(1.1); /* Aumentar el tamaño de la imagen al pasar el ratón */
+}
+
+.equipo-foto h3 {
+    font-size: 1.4em;
+    margin: 0.5% 0 5% 0;
+    color: #00ADE5; /* Azul más profundo para el nombre */
+    
+}
+
+.equipo-foto p {
+    font-size: 0.8em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.equipo-foto a{
+    color: #04B2D9;
+    font-weight: 600;
+}
+
+
+/*FOOTER*/
+
+#footer{
+    width: 100%;
+    background-color: #00ADE5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#footer i{
+    font-size: 4vh;
+    color: white;
+}
+
+#logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 10%;
+    padding: 1.5% 0 1% 0;
+
+}
+
+.bx{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+footer .bx:hover{
+    transform: translateY(-1vh); /* Mueve el botón hacia arriba */
+}
+
+#footer p{
+    color: white;
+    font-weight: 200;
+    margin-bottom: 2%;
+}
+
+
+
+
+/*Responsive para pantallas pequeñas*/
+@media (max-width: 768px) {
+    .sobre_nosotros, .nuestra_mision, .nuestra_vision, .valores, .conoce_equipo {
+        font-size: 2em; /* Reducir el tamaño de fuente */
+    }
+
+    .sobre_nosotros_2, .nuestra_mision_2, .nuestra_vision_2, .innovacion_2, .compromiso_2, .etica_2, .trabajo_equipo_2 {
+        font-size: 1em; /* Reducir el tamaño del texto en los párrafos */
+        margin: 2% 3%;
+    }
+
+    .equipo {
+        flex-direction: column; /* Cambiar de filas a columnas en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .equipo-foto {
+        width: 80%; /* Ampliar el ancho de las fotos en pantallas pequeñas */
+        margin: 2% 0;
+    }
+
+    .svg-container, .wave-container {
+        height: 8em; /* Reducir el tamaño del SVG */
+    }
+}
+
+/*responsive para pantallas extra pequeñas*/
+@media (max-width: 480px) {
+    header, footer {
+        font-size: 0.9em; /* Reducir aún más el tamaño del texto en el header y footer */
+        padding: 1% 0;
+    }
+
+    .sobre_nosotros, .nuestra_mision, .nuestra_vision, .valores {
+        font-size: 1.8em;
+    }
+
+    .equipo-foto {
+        width: 90%; /* Hacer las fotos aún más grandes en pantallas móviles */
+    }
+
+    .sobre_nosotros_2, .nuestra_mision_2, .nuestra_vision_2, .innovacion_2, .compromiso_2, .etica_2, .trabajo_equipo_2 {
+        font-size: 0.9em;
+        margin: 3% 5%;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+

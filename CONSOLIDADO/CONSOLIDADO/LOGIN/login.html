@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidro Exploradores</title>
+
+    <link rel="stylesheet" href="./login.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="../GOTA/gota.css">
+<link rel="icon" type="image/x-icon" href="../GOTA/Gota_Logo.png">
+
+<!--Esto hace que funcionen los alerts-->
+<link rel="stylesheet" href="sweetalert2.min.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+
+<body>
+
+<div id="principal">
+    <header>
+        <nav>
+            <div id="logo"></div>
+            <div id="barra_opciones">
+                <a class="nav" href="../HOME/home.html">Inicio</a>
+                <a class="nav" href="../EDUCATIVO/Educativo.html">Educativo</a>
+                <a class="nav" href="../INTERACTIVO/Interactivo.html">Interactivo</a>
+                <a class="nav" href="../PARA PAPITOS/Para_Papitos.html">Para papitos</a>
+                <a href="../LOGIN/login.html"><i class='bx bxs-user-pin' ></i></a>
+            </div>
+        </nav>
+    </header>
+
+<section>
+ <div id="fondogota">
+    <div id="personaje">
+        <div class="gota"></div>
+            <div class="ladoizquierdo">
+                <div class="ojoizquierdo">
+                    <div class="ojopizquierdo"></div>
+                    <div class="ojoppizquierdo"></div>
+                </div>
+                    <div class="mejillaizquierda"></div>
+                    <div class="cejaizquierda"></div>
+            </div>
+
+            <div class="ladoderecho">
+                <div class="ojoderecho">
+                <div class="ojopderecho"></div>
+                <div class="ojoppderecho"></div>
+                </div>
+                <div class="mejilladerecha"></div>
+                <div class="cejaderecha"></div>
+            </div>
+
+            <div class="boca">
+                <div class="lengua"></div>
+            </div>
+
+
+
+            <div id="pecas">
+                <div class="pecas1"></div>
+                <div class="pecas2"></div>
+                <div class="pecas3"></div>
+                <div class="pecas4"></div>
+            </div>
+    </div>
+</div>
+    <div id="cajaborde">
+        <div id="formulario">
+            <h1 id="titulo">Inicia sesión</h1>
+            <form action="">
+                <div id="datos">
+                    <h1>Correo Electrónico</h1>
+                    <input id="inputs" type="email" placeholder="Ejemplo@gmail.com" required>
+                    <i class='bx bx-user'></i>
+                </div>
+                <div id="datos">
+                    <h1>Contraseña</h1>
+                    <input  id="input_contraseña" type="password" placeholder="Ingresa tu contraseña" required>
+                    <i id="mostrarc" class='bx bx-show'></i>
+                    <i  id="ocultarc" class='bx bx-hide'></i>
+                </div>
+                
+                <div id="recordar_olvidar">
+                    <label>
+                        <input id="checkbox" type="checkbox"> Recuérdame
+                    </label>   
+                    <a href="">Olvidé mi Contraseña</a>
+                </div>
+
+                <button type="submit" id="enviar">Iniciar Sesión</button>
+                <p id="registrate"> ¿Aún no tienes cuenta? <a href="../REGISTRARSE/Registrate.html">Regístrate Ahora</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+<footer>
+    <div id="footer">
+        <label for="" id="logos">
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-whatsapp'></i>
+        <i class='bx bxl-instagram' ></i>
+        <i class='bx bxl-gmail' ></i>
+        </label>
+        <p>© Todos los derechos reservados</p>
+    </div>
+ </footer>
+</div>
+
+
+<script src="./login.js"></script>
+<script src="../GOTA/gota.js"></script>
+<!--Esto hace que funcionen los alerts-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.all.min.js"></script>
+</body>
+</html>

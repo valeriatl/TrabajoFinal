@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+/* estilos.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins';
+}
+
+/*TODO ESTO ES LA BARRA DE NAVEGACIÓN*/
+nav{
+    height: 6vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(-45deg, #00E0FE, #00ADE5);
+    box-shadow: 2px 0 10px 0px #2F2859;
+    z-index: 5;
+    display: flex;
+    justify-content: end;
+
+}
+
+nav i{
+    font-size: 2.4em;
+    color: white;
+}
+
+#barra_opciones{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#barra_opciones .nav{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-size: 1.4em;
+    background-color: transparent;
+    padding: 0.6% 1.9%;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+#barra_opciones .nav::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10%;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+  }
+
+#barra_opciones a:hover::before {
+    width: 100%;
+  }
+
+/*ACÁ TERMINA LA BARRA DE NAVEGACIÓN*/
+
+.principal{
+    padding-top: 6vh; /* Deja espacio para el nav fijo */
+}
+
+.encabezado{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.encabezado .titulo{
+    text-align: center;
+    padding: 1.2% 0;
+}
+
+.titulo{
+    font-size: 1.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2F2859;
+}
+
+.titulo p{
+    padding: 0.5% 0;
+    width: 70%;
+    font-size: 0.9em;
+    color: #2F2859;
+}
+
+/* NAVS */
+
+
+.seccion-oculta {
+    display: none;
+}
+
+.nav-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 0.5% 0;
+    gap: 0 2%;
+}
+
+
+.nav-tab {
+    cursor: pointer;
+    max-width: 150px; /* Ancho máximo por botón */
+    background-color: white;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 2vh;
+    font-weight: 600;
+    box-shadow: 0.2vh 0.4vh 0.8vh 0vh rgba(0, 0, 0, 0.216);
+    padding: .5% 1.2%;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.nav-tab:hover{
+    background-color: #00ADE5;
+    color: white;
+    transform: scale(1.05);
+}
+
+.nav-tab.active{
+    background-color: #00ADE5;
+    color: white;
+}
+
+/*Cuerpo de todas las actividades*/
+
+.seccion-activa{
+    padding: 2% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.seccion-activa h2{
+
+    width: 50%;
+    text-align: center;
+    font-size: 2.2em;
+    color: #00ADE5;
+}
+
+.seccion-activa p{
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: justify;
+    width: 40%;
+    margin: .5% 0 2% 0;
+    line-height: 2.7vh;
+    color: #2F2859;
+}
+
+/* Contenedor de la turbina */
+#contenedor-turbina {
+    position: relative; /* Necesario para posicionar elementos dentro de este contenedor */
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: #141125; /* Fondo similar al agua */
+    display: flex;
+    align-items: center;
+    border-radius: 2vh 12vh;
+}
+
+/* Lienzo de la turbina */
+#lienzo-turbina {
+    display: block;
+    width: 550px;
+    height: 450px;
+    background-color: transparent; /* Fondo transparente gestionado por el contenedor */
+}
+
+/* Bombillo */
+#bombillo {
+    position: relative; /* Para colocarlo dentro del contenedor */
+    width: 100px;
+    height: 160px;
+    background-color: #333; /* Color del vidrio del bombillo apagado */
+    border-radius: 50% 50% 20% 20%; /* Redondeo de la parte superior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Parte de luz (interna) */
+#bombillo::before {
+    content: '';
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    border-radius: 50%;
+    opacity: 0; /* Apagado por defecto */
+    transition: opacity 0.3s, box-shadow 0.3s;
+}
+
+/* Base del bombillo (gris) */
+#bombillo::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; /* Colocar debajo del vidrio */
+    width: 60px;
+    height: 40px;
+    background-color: #aaa; /* Color gris para la base */
+    border-radius: 4px; /* Bordes redondeados de la base */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Bombillo encendido */
+#bombillo.encendido {
+    background-color: #ffd700; /* Color amarillo para el vidrio */
+    box-shadow: 0 0 30px 100px rgba(255, 255, 0, 0.192); /* Efecto de luz amarilla */
+}
+
+#bombillo.encendido::before {
+    opacity: 1; /* Hacer visible la luz interna */
+    box-shadow: 0 0 40px 15px rgba(255, 255, 0, 0.774);
+}
+
+
+/* ACTIVIDAD 2 */
+
+
+#juego-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#contenedor-juego {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px auto;
+    background: #00E0FE;
+    border: 2px solid #00b0c8;
+    overflow: hidden;
+    border-radius: 2vh;
+}
+
+#gota {
+    width: 20px;
+    height: 30px;
+    background-color: #2F2859;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 140px;
+    border-radius: 50% 50% 60% 60%;
+    
+}
+
+#cubeta {
+    width: 60px;
+    height: 30px;
+    background-color: #F29494;
+    position: absolute;
+    bottom: 0;
+    left: 120px;
+    border-radius: 10px;
+    
+}
+#puntuacion-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 10px auto;
+    width: 300px;
+}
+
+#puntuacion {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+#boton-iniciar {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #F29494;
+    color: #694040;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-weight: 700;
+}
+
+#boton-iniciar:hover {
+    background-color: #ef7f7f;
+    transform: scale(1.05);
+}
+
+.teclas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#actividad2 i{
+    cursor: text;
+    font-size: 20px;
+}
+
+/* ACTIVIDAD 3 */
+
+.imagen-actividad {
+    width: 80%; /* Ajusta el tamaño de la imagen */
+    max-width: 500px; /* Máximo ancho */
+    height: auto; /* Mantener proporciones */
+    margin: 20px auto; /* Centrarla */
+    display: block; /* Asegura que esté en su propia línea */
+    border: 2px solid #51cde6; /* Borde para consistencia */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para ocultar y mostrar secciones */
+.seccion-oculta {
+    display: none;
+}
+
+
+
+.boton-descargar {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #694040;
+    background-color: #F29494;
+    text-decoration: none;
+    border-radius: 1vh;
+    transition: transform 0.3s ease;
+    font-weight: 700;
+}
+
+.boton-descargar:hover {
+    background-color: #ef7f7f;
+    transform: scale(1.05);
+
+}
+
+/* ACTIVIDAD 4 */
+
+#rompecabezas {
+    width: 390px;
+    height: 390px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 130px);
+    grid-template-rows: repeat(3, 130px);
+    gap: 2px;
+}
+
+.pieza {
+    width: 130px;
+    height: 130px;
+    background-size: 390px;
+    cursor: pointer;
+}
+
+#rompecabezas .pieza {
+    background-size: 390px 390px; /* Ajusta la imagen al tamaño total */
+
+}
+
+#reiniciar {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #F29494;
+    color: #694040;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    font-weight: 700;
+}
+
+#reiniciar:hover {
+    background-color: #ef7f7f;
+    transform: scale(1.05);
+}
+
+
+/*FOOTER*/
+
+#footer{
+    width: 100%;
+    background-color: #00ADE5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#footer i{
+    font-size: 4vh;
+    color: white;
+}
+
+#logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 10%;
+    padding: 1.5% 0 1% 0;
+
+}
+
+.bx{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+footer .bx:hover{
+    transform: translateY(-1vh); /* Mueve el botón hacia arriba */
+}
+
+#footer p{
+    color: white;
+    font-weight: 200;
+    margin-bottom: 2%;
+}
+

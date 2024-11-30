@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    outline: none;
+}
+
+#principal{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 84.8vh;
+}
+
+/*TODO ESTO ES LA BARRA DE NAVEGACIÓN*/
+nav{
+    height: 6vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(-45deg, #00E0FE, #00ADE5);
+    box-shadow: 2px 0 10px 0px #2F2859;
+    z-index: 5;
+    display: flex;
+    justify-content: end;
+
+}
+
+nav i{
+    font-size: 2.4em;
+    color: white;
+}
+
+#barra_opciones{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#barra_opciones .nav{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-size: 1.4em;
+    background-color: transparent;
+    padding: 0.6% 1.9%;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+#barra_opciones .nav::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10%;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+  }
+
+#barra_opciones a:hover::before {
+    width: 100%;
+  }
+
+/*ACÁ TERMINA LA BARRA DE NAVEGACIÓN*/
+section{
+    transform: scale(0.9);
+}
+
+#fondogota{
+    position: absolute;
+    top: 19%;
+    right: 62.1%;
+    z-index: 1;
+}
+
+#personaje{
+    transform: scale(1.18);
+}
+
+.gota{
+    box-shadow: 0.2vh 0.2vh 1vh 0.0vh #2F2859;
+}
+
+#cajaborde{
+    position: absolute;
+    top: 12.5%;
+    left: 25.4%;
+    width: 60%;
+    height: 72.4vh;
+    background: linear-gradient(-45deg, #00E0FE, #00ADE5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 10vh 10vh 0;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 72vh;
+    width: 60%;
+    margin: 0 0 0 20%;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+}
+
+#titulo{
+    text-align: center;
+    margin-bottom: 3%;
+    font-size: 3em;
+    font-weight: 900;
+    color: white;
+}
+
+#datos{
+    width: 100%;
+    margin-bottom: 4%;
+    position: relative;
+}
+
+#datos h1{
+    padding: 0 0 0 1%;
+    font-size: 1.5em;
+    color: #2F2859;
+    margin: 0% 0 0 0;
+}
+
+#datos input{
+    width: 100%;
+    height: 4.5vh;
+    border-radius: 5vw;
+    margin: 1% 0 0% 0;
+    font-size: 1em;
+    padding: 0 0 0 3%;
+    border: 0.3vh solid #2F2859;
+    color: #2F2859;
+    background-color: rgba(255, 255, 255, 0.879);
+}
+
+#datos input::placeholder{
+    padding: 0 0 0 0%;
+    color: #2F2859;
+}
+
+#datos input:focus {
+    transform: scale(1.02);
+    border: 0.3vh solid #00E0FE;
+    outline: none; /* Opcional: elimina el borde predeterminado del navegador */
+}
+
+#datos i{
+    display: flex;
+    align-items: center;
+    height: 5.3vh;
+    position: absolute;
+    right: 3vh;
+    top: 75%;
+    transform: translateY(-50%);
+    font-size: 2em; 
+}
+
+#mostrarc1{
+    display: none;
+    cursor: pointer;
+}
+
+#ocultarc1{
+    cursor: pointer;
+}
+
+#mostrarc2{
+    display: none;
+    cursor: pointer;
+}
+#ocultar2{
+    cursor: pointer;
+}
+
+#alerta p{
+    font-family: 'poppins';
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: -3% 0% 3% 2%;
+    color: red;
+}
+
+#enviar{
+    cursor: pointer;
+    width: 15vw;
+    padding: 1.2% 0%;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin: 0.5% 30% 3% 30%;
+    border-radius: .5vw;
+    background: linear-gradient(45deg, #00E0FE, #00ADE5);
+    border: 0;
+    color: white;
+    transition: transform 0.4s ease;
+    box-shadow: 0 0 0.5vh 0.15vh #2F2859;
+}
+
+#enviar:hover{
+    transform: scale(1.07);
+}
+
+
+
+#registrate{
+    width: 100%;
+    text-align: center;
+    font-size: 2vh;
+    color: #2F2859;
+}
+
+#registrate a{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+#registrate a:hover{
+    text-decoration: underline;
+}
+
+/*FOOTER*/
+
+#footer{
+    width: 100%;
+    background-color: #00ADE5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#footer i{
+    font-size: 4vh;
+    color: white;
+}
+
+#logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 10%;
+    padding: 1.5% 0 1% 0;
+
+}
+
+.bx{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+footer .bx:hover{
+    transform: translateY(-1vh); /* Mueve el botón hacia arriba */
+}
+
+#footer p{
+    color: white;
+    font-weight: 200;
+    margin-bottom: 2%;
+}
+

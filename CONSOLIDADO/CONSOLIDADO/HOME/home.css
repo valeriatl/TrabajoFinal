@@ -1,0 +1,521 @@
+/*Esto importa las tipografías a usar en la página web*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    min-height: 100vh;
+    padding-top: 6vh; /* Deja espacio para el nav fijo */
+}
+
+/*TODO ESTO ES LA BARRA DE NAVEGACIÓN*/
+nav{
+    height: 6vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(-45deg, #00E0FE, #00ADE5);
+    box-shadow: 2px 0 10px 0px #2F2859;
+    z-index: 5;
+    display: flex;
+    justify-content: end;
+
+}
+
+nav i{
+    font-size: 2.4em;
+    color: white;
+}
+
+#barra_opciones{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#barra_opciones .nav{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-size: 1.4em;
+    background-color: transparent;
+    padding: 0.6% 1.9%;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+#barra_opciones .nav::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10%;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease-in-out;
+  }
+
+#barra_opciones a:hover::before {
+    width: 100%;
+  }
+
+/*ACÁ TERMINA LA BARRA DE NAVEGACIÓN*/
+
+
+/*PRIMER SECTION*/
+
+#personaje{
+    transform: scale(0.8);
+}
+
+
+#Bienvenida{
+    width: 100%;
+    height: auto;
+    padding: 0 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 5%;
+    flex-direction: row;
+    margin: 2% 0;
+    background-color: transparent;
+
+}
+
+
+#nube{
+    background-color: #00E0FE;
+    width: 50%;
+    height: 40vh;
+    border-radius: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3% 5%;
+
+}
+
+#contenido{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenidonube1{
+    font-weight: 700;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+}
+
+.contenidonube2{
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    color: white;
+    display: none;
+    font-size: 2vw; /* Escala proporcional al ancho de la pantalla */
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+}
+
+.bienvenidanombre{
+    text-align: center;
+    display: flex;
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vw; /* Escala proporcional al ancho de la pantalla */
+
+}
+
+.entradanombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 60%;
+    
+}
+
+.entradanombre input{
+    width: 100%;
+    height: 30%;
+    border-radius: 40vw;
+    display: flex;
+    font-size: 120%;
+    padding: 0 0 0 5%;
+    border: 0;
+    background-color: #00ADE5;
+    color: white;
+    outline: none; /*Sirve para que al hacer clic el input no se alumbre de otro color*/
+}
+
+.entradanombre input::placeholder{
+    font-family: 'quicksand';
+    font-weight: 600;
+    color:white;
+}
+
+.entradanombre button{
+    cursor: pointer;
+    padding: 0.5% 8%;
+    font-size: 1.5vw;
+    border-radius: 80vw;
+    background-color: transparent;
+    border: 0.18vw solid white;
+    color: white;
+    transition: transform 0.3s ease;
+    margin-top: 5%;
+}
+
+.entradanombre button:hover{
+    transform: scale(1.08);
+}
+
+.nombrenuevo{
+    color: #2F2859;
+    text-transform: capitalize;
+}
+
+#nube_triangulo{
+    position: absolute;
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+    border-bottom: 10vw solid #00E0FE;
+    transform: rotate(27deg) scale(0.5);
+    left: 42%;
+    top: 39%;
+
+}
+
+@media only screen and (min-width: 360px) and (max-width: 1239px){
+    #personaje{
+        transform: scale(0.65);
+    }
+}
+
+@media only screen and (min-width: 1240px){
+    #personaje{
+        transform: scale(0.8);
+    }
+}
+
+
+
+/*SEGUNDO SECTION*/
+.separador{
+    position: absolute;
+    top: 70vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(45deg, #00E0FE, #00ADE5);
+    z-index: -1;
+    transform: skewY(-5deg);
+    transform-origin: top right;
+}
+
+#because{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 5% 20%;
+    margin-top: 15vh;
+    
+}
+
+.contenido{
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+
+}
+
+.gota1{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#cuadrogota{
+    width: 30vw;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.gotab{
+    background-color: #ffffff;
+    height: 20vw;
+    width: 20vw;
+    border-radius: 90% 0 70% 70% / 70% 0 90% 70%;
+    transform: rotate(-45deg);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.ola{
+    background-color: #00e0fe98;
+    height: 160%;
+    width: 150%;
+    border-radius: 40% 35% 45% 30%;
+    animation: ola 30s linear infinite;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 25%;
+    right: 20%;
+
+}
+
+ @keyframes ola {
+    0% { transform: rotate(45deg); }
+  100% { transform: rotate(3600deg); } 
+}
+
+#contenido_texto{
+    width: 50%;
+    height: auto;
+}
+
+#contenido_texto h2{
+    font-size: 2.618vw;
+    word-wrap: break-word;
+    margin-bottom: 5%;
+    letter-spacing: 1px;
+    color: white;
+}
+
+#contenido_texto p{
+    font-size: 1.2vw;
+    word-wrap: break-word;
+    color: white;
+}
+
+.escondido {
+    opacity: 0;
+    transform: translateY(50px); /* Desplazamiento inicial hacia abajo */
+    transition: all 0.6s ease; /* Animación suave */
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* Posición final */
+}
+
+/*Section del vídeo*/
+
+#sec_video{
+    width: 100%;
+    height: auto;
+    margin-top: 10vh;
+    padding: 0% 20% 0;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video iframe{
+    width: 40vw;
+    height: 50vh;
+    box-shadow: 0vh 0vh 1vh 0.2vh #2F2859;
+}
+
+#sec_video h2{
+    width: 40vw;
+    text-align: center;
+    font-size: 2.618vw;
+    margin-bottom: 5%;
+    letter-spacing: 1px;
+    font-weight: 800;
+    color: #2F2859;
+}
+
+
+
+/*CONTENEDOR DUCHA*/
+
+#d_contenedor{
+    padding: 5% 25%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.d_texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    height: 100%;
+    font-family: 'montserrat';
+    padding: 0 5%;
+}
+
+
+
+.ducha{
+    transform: scale(1.32);
+    transform-origin: top right;
+}
+
+.d_texto h3{
+    width: 100%;
+    font-size: 2.618vw;
+    font-weight: 700;
+    color: #00ADE5;
+}
+
+.d_texto p{
+    color: #2F2859;
+    font-weight: 300;
+    text-align: left;
+    font-size: 1.2vw;
+    padding: 5% 0 0 0;
+}
+
+.calculadora_vinculo{
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+.calculadora_vinculo:hover{
+    text-decoration: underline;
+}
+
+/*CONTENEDOR SIGAMOS APRENDIENDO*/
+
+#sigamos{
+    background-color: #2F2859;
+    padding: 5% 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#sigamos h3{
+    width: 100%;
+    font-size: 2.618vw;
+    font-weight: 700;
+    color: white;
+}
+
+#textosigamos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.party{
+    align-items: center;
+    font-size: 15vw;
+}
+
+#textosigamos p:last-of-type{
+    font-weight: 300;
+    width: 50%;
+    text-align: left;
+    font-size: 1.4vw;
+    word-wrap: break-word;
+    color: white;
+}
+
+#textosigamos a{
+    text-decoration: none;
+    color: #F29494;
+    font-weight: 600;
+}
+
+#textosigamos a:hover{
+    text-decoration: underline;
+}
+
+#textosigamos .nombrenuevo{
+    color: #00E0FE;
+    font-weight: 600;
+}
+
+
+/*FOOTER*/
+
+#footer{
+    width: 100%;
+    background-color: #00ADE5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#footer i{
+    font-size: 4vh;
+    color: white;
+}
+
+#logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 10%;
+    padding: 1.5% 0 1% 0;
+
+}
+
+.bx{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+footer .bx:hover{
+    transform: translateY(-1vh); /* Mueve el botón hacia arriba */
+}
+
+#footer p{
+    color: white;
+    font-weight: 200;
+    margin-bottom: 2%;
+}
+

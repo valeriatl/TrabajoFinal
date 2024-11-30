@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hidro Exploradores </title>
+    <link rel="stylesheet" href="./consumo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="../GOTA/Gota_Logo.png">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div id="logo"></div>
+            <div id="barra_opciones">
+                <a class="nav" href="../HOME/home.html">Inicio</a>
+                <a class="nav" href="../EDUCATIVO/Educativo.html">Educativo</a>
+                <a class="nav" href="../INTERACTIVO/Interactivo.html">Interactivo</a>
+                <a class="nav" href="../PARA PAPITOS/Para_Papitos.html">Para papitos</a>
+                <a href="../LOGIN/login.html"><i class='bx bxs-user-pin' ></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contenedor_principal">
+    <div class="container">
+        <h1>Simulador de Consumo de Agua</h1>
+        <form id="form-consumo-agua">
+            <div class="form_body">
+                <div class="npersonas">
+                <label for="personas">¿Cuantas personas viven en tu casa? 👀</label>
+            <select name="personas" id="personas" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+            <label class="selecciona">Selecciona las actividades que se realizan diariamente en tu casa:</label>
+
+            <div class="opciones">
+            <!-- Checklist de actividades -->
+             <div class="opcion">
+            <input type="checkbox" id="ducha" name="actividad" value="ducha">
+            <label for="ducha">Ducha (60 litros por persona)</label><br>
+        </div>
+        <div class="opcion">
+            <input type="checkbox" id="lavado" name="actividad" value="lavado">
+            <label for="lavado">Lavado de ropa (80 litros por persona)</label><br>
+        </div>
+        <div class="opcion">
+            <input type="checkbox" id="cocina" name="actividad" value="cocina">
+            <label for="cocina">Cocina (30 litros por persona)</label><br>
+        </div>
+            <div class="opcion">
+            <input type="checkbox" id="limpieza" name="actividad" value="limpieza">
+            <label for="limpieza">Limpieza del hogar (50 litros por persona)</label><br>
+        </div>
+        <div class="opcion">
+            <input type="checkbox" id="bebida" name="actividad" value="bebida">
+            <label for="bebida">Consumo de agua potable (2 litros por persona)</label><br>
+        </div>
+        </div>
+    </div>
+    <div class="botones">
+            <button class="calcular" type="button" onclick="calcularConsumo()">Calcular Consumo</button>
+            <button class="limpiar" type="button" onclick="limpiarFormulario()">Limpiar</button> <!-- Botón de limpiar -->
+        </form>
+    </div>
+
+    <section class="graficos" id="graficos">
+        <div class="result" id="resultado" style="display: none;">
+            <h3>Resultado:</h3>
+            <p>El consumo estimado de agua para tu hogar es: <span id="consumo-resultado"></span> litros por día.</p>
+        </div>
+
+        <!-- Tablas y gráficos -->
+        <table id="tabla-actividades">
+            <thead>
+                <tr>
+                    <th>Actividad</th>
+                    <th>Consumo por Persona (litros)</th>
+                    <th>Consumo Total (litros)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <canvas id="graficoBarras" width="400" height="200"></canvas>
+        <canvas id="graficoTorta" width="400" height="200"></canvas>
+        </div>
+    </section>
+</section>
+
+<footer>
+    <div id="footer">
+        <label for="" id="logos">
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-whatsapp'></i>
+        <i class='bx bxl-instagram' ></i>
+        <i class='bx bxl-gmail' ></i>
+        </label>
+        <p>© Todos los derechos reservados</p>
+    </div>
+ </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./consumo.js"></script>
+</body>
+</html>

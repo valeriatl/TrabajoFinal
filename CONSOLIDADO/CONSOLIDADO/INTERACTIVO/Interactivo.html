@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hidro Exploradores </title>
+    <link rel="stylesheet" href="Interactivo.css">
+    <link rel="stylesheet" href="../GOTA/gota.css">
+    <link rel="stylesheet" href="./home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="../GOTA/Gota_Logo.png">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div id="logo"></div>
+            <div id="barra_opciones">
+                <a class="nav" href="../HOME/home.html">Inicio</a>
+                <a class="nav" href="../EDUCATIVO/Educativo.html">Educativo</a>
+                <a class="nav" href="../INTERACTIVO/Interactivo.html">Interactivo</a>
+                <a class="nav" href="../PARA PAPITOS/Para_Papitos.html">Para papitos</a>
+                <a href="../LOGIN/login.html"><i class='bx bxs-user-pin' ></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="principal">
+
+        <div class="encabezado">
+            <div class="titulo">
+                <h1>¡Aprendamos sobre Energía hidroeléctrica!</h1>
+                <p>Descubre cómo funciona la energía hidráulica y la importancia de cuidar el agua mientras juegas.</p>
+            </div>
+
+            <section class="nav-tabs">
+                <button class="nav-tab active" onclick="mostrarSeccion('actividad1')">Actividad 1</button>
+                <button class="nav-tab" onclick="mostrarSeccion('actividad2')">Actividad 2</button>
+                <button class="nav-tab" onclick="mostrarSeccion('actividad3')">Actividad 3</button>
+                <button class="nav-tab" onclick="mostrarSeccion('actividad4')">Actividad 4</button>
+            </section>
+        </div>
+
+    <main>
+        <!-- Actividad 1 -->
+
+        <section id="actividad1" class="seccion-activa">
+
+            <h2>¡Turbina impulsada por agua!</h2>
+            <p>Observa cómo el agua impulsa la turbina a girar.<br> Las turbinas hidráulicas son máquinas que aprovechan la energía del agua para generar electricidad:</p> 
+
+            <h2>Instrucciones</h2>
+             <!-- se utiliza para dibujar gráficos, animaciones o imágenes mediante JavaScript -->
+            <p>Arrastra el agua con el ratón para hacer girar la turbina y observa cómo se enciende el bombillo al girarla.</p>
+                        <!-- Bombillo -->
+      
+             <!-- Contenedor de turbina y bombillo -->
+             <div id="contenedor-turbina">
+                <canvas id="lienzo-turbina" width="500" height="400"></canvas>
+                <div id="bombillo"></div> <!-- Bombillo dentro del contenedor -->
+            </div>
+
+            <h2>¿Cómo funciona?</h2>
+            <p>El agua pasa por la turbina y hace girar un eje interior, que está conectado a un generador que produce electricidad. </p>
+
+
+
+        </section>
+
+        <!-- Actividad 2 -->
+        <section id="actividad2" class="seccion-oculta">
+            <h2>¡Atrapa las gotas de agua!</h2>
+            <p>El agua es vital para nuestra existencia.
+                <br>
+                La necesitamos para TODO así que no debemos desperdiciarla.</p>
+            <h2>¡Ayúdanos a atrapar las gotas para que no se desperdicie!</h2>
+            <div id="contenedor-juego">
+                <div id="gota"></div>
+                <div id="cubeta"></div>
+            </div>
+
+            <p class="teclas">Usa las teclas <i class='bx bxs-left-arrow-square' ></i> y <i class='bx bxs-right-arrow-square'></i> para mover la cubeta y atrapar las gotas.</p>
+        </div>
+        <div id="puntuacion-container">
+                <div id="puntuacion">Puntuación: 0</div>
+                <button id="boton-iniciar">Iniciar Juego</button>
+            </div>
+        </section>
+         <!-- Actividad 3 -->
+
+    <!-- Actividad 3 -->
+    <section id="actividad3" class="seccion-oculta">
+        <h2>¡Bingo!</h2>
+        <img src="imagen1.jpg" alt="Cartón de Bingo educativo" class="imagen-actividad">
+        <h2>Instrucciones de juego</h2>
+        <p> los participantes tendrán a su disposición 25 cartones, cada uno con 9 imágenes relacionadas con temas cruciales para el cuidado del medioambiente. </p>
+        <p>Estas imágenes nos enseñan temas como las energías renovables, la movilidad sostenible, el cambio climático y el ahorro de recursos.</p>
+        <p>La dinámica del juego no solo se centrará en marcar las imágenes del cartón, sino que te ayuda a tomar conciencia sobre nuestro medio ambiente.</p>
+        <h2>Para tus papitos...</h2>
+        <p> Durante la partida, se recomienda que los participantes comenten y analicen los conceptos que vayan apareciendo para comprender qué relación tiene cada uno de ellos con el medioambiente.</p>
+        <a href="Bingo.pdf" download="Energía_Hidráulica.pdf" class="boton-descargar">Descargar PDF</a>
+    </section>
+
+    
+        <!-- Actividad 4 -->
+    <section id="actividad4" class="seccion-oculta">
+
+        <h2>Rompecabezas Hidroeléctrico</h2>
+    <p>Arrastra y coloca las piezas en su lugar para completar la imagen. 
+        <br>
+¡Podrás observar cómo se ve una planta hidroeléctrica!</p>
+
+    <div id="rompecabezas" class="rompecabezas">
+        <div class="pieza" id="pieza1"></div>
+        <div class="pieza" id="pieza2"></div>
+        <div class="pieza" id="pieza3"></div>
+        <div class="pieza" id="pieza4"></div>
+        <div class="pieza" id="pieza5"></div>
+        <div class="pieza" id="pieza6"></div>
+        <div class="pieza" id="pieza7"></div>
+        <div class="pieza" id="pieza8"></div>
+        <div class="pieza" id="pieza9"></div>
+    </div>
+
+    <button id="reiniciar">Reiniciar Juego</button>
+    </section>
+
+
+    </main>
+</section>
+    <footer>
+        <div id="footer">
+            <label for="" id="logos">
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-whatsapp'></i>
+            <i class='bx bxl-instagram' ></i>
+            <i class='bx bxl-gmail' ></i>
+            </label>
+            <p>© Todos los derechos reservados</p>
+        </div>
+     </footer>
+
+    <script src="Interactivo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
